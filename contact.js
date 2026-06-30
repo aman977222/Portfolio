@@ -10,20 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
         accessKeyInput.value = WEB3FORMS_ACCESS_KEY;
     }
 
-    // Check if the user has updated the Web3Forms key
-    if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE" || !WEB3FORMS_ACCESS_KEY) {
-        showSetupWarning();
-    }
-
     if (form) {
         form.addEventListener("submit", function (e) {
             e.preventDefault();
-
-            // Validate that access key is updated
-            if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE" || !WEB3FORMS_ACCESS_KEY) {
-                showStatus("Please set your Web3Forms Access Key in contact.js first!", "error");
-                return;
-            }
 
             const submitBtn = form.querySelector(".btn-submit");
             const originalBtnHTML = submitBtn.innerHTML;
@@ -85,25 +74,5 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!statusDiv) return;
         statusDiv.className = "form-status";
         statusDiv.innerHTML = "";
-    }
-
-    function showSetupWarning() {
-        const contactCard = document.querySelector(".contact-card");
-        if (!contactCard || document.querySelector(".setup-warning-banner")) return;
-
-        const warningBanner = document.createElement("div");
-        warningBanner.className = "setup-warning-banner";
-        
-        warningBanner.innerHTML = `
-            <div class="warning-icon">⚠️</div>
-            <div class="warning-content">
-                <h4>Gmail Integration Setup Required</h4>
-                <p>Apne Gmail par messages receive karne ke liye:
-                   <br>1. <a href="https://web3forms.com" target="_blank" class="warning-link">web3forms.com</a> par jaakar free Access Key generate karein.
-                   <br>2. Us key ko <code>contact.js</code> file ke line 1 par <code>WEB3FORMS_ACCESS_KEY</code> me save karein.
-                </p>
-            </div>
-        `;
-        contactCard.insertBefore(warningBanner, contactCard.firstChild);
     }
 });
