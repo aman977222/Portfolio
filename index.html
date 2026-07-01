@@ -15,8 +15,8 @@
     <header class="header">
         <a href="index.html" class="logo">Aman Kumar Jangid</a>
         <nav class="nav">
-            <a href="index.html#about" class="nav-link active">About Me</a>
-            <a href="project.html" class="nav-link">Projects</a>
+            <a href="#about" class="nav-link active">About Me</a>
+            <a href="#projects" class="nav-link">Projects</a>
             <a href="contact.html" class="nav-link">Contact</a>
             <a href="cv_aman.pdf" download="Aman_Kumar_Jangid_CV.pdf" class="btn-cv">Download CV</a>
         </nav>
@@ -49,13 +49,100 @@
                     
                     <div class="about-actions">
                         <a href="cv_aman.pdf" download="Aman_Kumar_Jangid_CV.pdf" class="btn btn-primary">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
                             Download CV
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <span class="badge">My Work</span>
+                <h2 class="section-title">My Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="shreeshyam.png" alt="E-commerce Website">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name">shree shyam product - E-Commerce Platform</h3>
+                        <p class="project-desc">This website is an e-commerce platform called "Shree Shyam Products" that showcases and sells traditional Indian handicrafts, eco-friendly bags, and wooden home decor. It features standard online shopping functionalities such as a dynamic shopping cart, structured product categories, and regional artisan brand filters to provide a seamless user experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML & CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Web Design</span>
+                        </div>
+                        <a href="https://aman977222.github.io/Shree-Shyam-Product/" target="_blank" class="project-link">
+                            Visit Website
+                            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="NEXUS.png" alt="E-commerce Website">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name">NEXUS - E-Commerce Platform</h3>
+                        <p class="project-desc">A professional networking platform for tech enthusiasts to connect, share knowledge, and collaborate on projects. Features include profiles, blogs, project showcases, and community forums.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="https://aman977222.github.io/NEXUS/" target="_blank" class="project-link">
+                            Visit Website
+                            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Scroll Spy & Active Nav Link Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    const href = link.getAttribute("href");
+                    if (href === `#${current}` || href === `index.html#${current}`) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
