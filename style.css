@@ -823,7 +823,7 @@ section:last-of-type {
    Background Video Styles
    ========================================== */
 
-/* .video-bg-container {
+.video-bg-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -852,4 +852,4 @@ section:last-of-type {
     width: 100%;
     height: 100%;
     background: transparent;
-} */
+}
