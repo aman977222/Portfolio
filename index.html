@@ -23,7 +23,14 @@
     </div>
     <header class="header">
         <a href="index.html" class="logo">Aman Kumar Jangid</a>
-        <nav class="nav">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation" id="menuToggle" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="nav-backdrop" id="navBackdrop"></div>
+        <nav class="nav" id="navMenu">
+            <a href="index.html" class="nav-link">About Me</a>
             <a href="education.html" class="nav-link">Education</a>
             <a href="project.html" class="nav-link">Projects</a>
             <a href="contact.html" class="nav-link">Contact</a>
@@ -39,22 +46,21 @@
                     <div class="about-image-wrapper">
                         <img src="aman.jpeg" alt="Aman Kumar Jangid" class="about-image">
                     </div>
-                    <div class="social-links ">
-                        <a href="https://github.com/aman977222" class="social-icon " aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <div class="social-links">
+                        <a href="https://github.com/aman977222" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/aman-kumar-jangid/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.instagram.com/offical_aman1279/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
-                    
                 </div>
                 <div class="about-content">
                     <span class="badge">About Me</span>
                     <h1 class="about-title">Hi, I'm Aman Kumar Jangid</h1>
                     <p class="about-description">
-                        I'm an ambitious BCA student specializing in Artificial Intelligence and Data Science with hands-on skills in data analysis, predictive modeling, and Python. Eager to apply machine learning concepts to solve real-world business challenges and drive data-driven solutions.
+                        Motivated a strong foundation in programming, databases, and data science fundamentals,seeking an entry-level opportunity in Data Science. Eager to apply analytical and technical skills gained through academic projects and hands-on web development work to contribute to a dynamic organization while continuing to grow professionally.
                     </p>
 
                     <div class="skills-wrapper">
-                        <h3>My Skills</h3>
+                        <h3>My Skills</h3>      
                         <ul class="skills-list">
                             <li><span class="skill-dot"></span> HTML, CSS & JavaScript (Basic)</li>
                             <li><span class="skill-dot"></span> Python</li>
@@ -63,33 +69,12 @@
                             <li><span class="skill-dot"></span> Data Science</li>
                         </ul>
                     </div>
-                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Scroll Spy & Active Nav Link Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll(".nav-link");
-
-            window.addEventListener("scroll", () => {
-                let current = "";
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= (sectionTop - 150)) {
-                        current = section.getAttribute("id");
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                    const href = link.getAttribute("href");
-                    if (href === `#${current}` || href === `index.html#${current}`) {
-                        link.classList.add("active");
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- Navigation & Interaction Script -->
+    <script src="script.js" defer></script>
 </body>
 </html>
