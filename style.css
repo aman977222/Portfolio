@@ -1,17 +1,17 @@
 /* Core Design Tokens and Reset */
 :root {
-    --bg-primary: ghostwhite;
-    --bg-secondary: white;
-    --text-primary: midnightblue;
-    --text-secondary: slategray;
-    --accent-indigo: indigo;
-    --primary-color: var(--accent-indigo);
+    --bg-primary: black;
+    --bg-secondary: black;
+    --text-primary: white;
+    --text-secondary: silver;
+    --accent-indigo: deepskyblue;
+    --primary-color: deepskyblue;
     --accent-cyan: cyan;
-    --gradient-accent: linear-gradient(135deg, var(--accent-indigo), var(--accent-cyan));
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(15, 23, 42, 0.06);
-    --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-    --card-shadow-hover: 0 20px 40px rgba(15, 23, 42, 0.08);
+    --gradient-accent: linear-gradient(135deg, cyan, deepskyblue);
+    --glass-bg: black;
+    --glass-border: darkslategray;
+    --card-shadow: 0 10px 30px black;
+    --card-shadow-hover: 0 20px 40px black;
     --font-sans: 'Outfit', sans-serif;
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -44,13 +44,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.1rem 7%;
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: black;
     border-bottom: 1px solid var(--glass-border);
     z-index: 1000;
     transition: var(--transition-smooth);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 20px black;
 }
 
 .logo {
@@ -100,11 +98,11 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--text-primary);
+    color: cyan;
 }
 
 .nav-link.active {
-    color: var(--text-primary);
+    color: cyan;
     font-weight: 600;
 }
 
@@ -123,20 +121,20 @@ body {
     padding: 0.5rem 1.2rem;
     border-radius: 12px;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     cursor: pointer;
     background: var(--gradient-accent);
-    color: white !important; /* Pure White */
+    color: black !important;
     border: none;
-    box-shadow: 0 4px 15px -3px rgba(79, 70, 229, 0.3); /* Indigo Shadow */
+    box-shadow: 0 4px 15px deepskyblue;
     transition: var(--transition-smooth);
     white-space: nowrap;
 }
 
 .btn-cv:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px -3px rgba(79, 70, 229, 0.5);
+    box-shadow: 0 8px 20px cyan;
 }
 
 /* Mobile Nav Toggle Button */
@@ -287,10 +285,10 @@ section:last-of-type {
 }
 
 .social-icon:hover {
-    color: white;
+    color: black;
     background: var(--gradient-accent);
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 10px 20px cyan;
     border-color: transparent;
 }
 
@@ -301,7 +299,7 @@ section:last-of-type {
     aspect-ratio: 1;
     background: var(--bg-secondary);
     border: 1px solid var(--glass-border);
-    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 20px 50px black;
     max-width: 400px;
     margin: 0 auto;
 }
@@ -311,7 +309,7 @@ section:last-of-type {
     position: absolute;
     inset: 0;
     background: var(--gradient-accent);
-    opacity: 0.03;
+    opacity: 0.05;
     z-index: 1;
     transition: var(--transition-smooth);
 }
@@ -332,12 +330,12 @@ section:last-of-type {
     display: inline-block;
     padding: 0.4rem 1.1rem;
     border-radius: 50px;
-    background: rgba(79, 70, 229, 0.07);
-    color: var(--accent-indigo);
+    background: black;
+    color: cyan;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    border: 1px solid rgba(79, 70, 229, 0.12);
+    border: 1px solid darkslategray;
 }
 
 .about-title {
@@ -389,7 +387,7 @@ section:last-of-type {
 }
 
 .skills-list li:hover {
-    color: var(--text-primary);
+    color: cyan;
 }
 
 .skill-dot {
@@ -397,7 +395,7 @@ section:last-of-type {
     height: 8px;
     border-radius: 50%;
     background: var(--accent-cyan);
-    box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+    box-shadow: 0 0 10px cyan;
 }
 
 /* Education Section Styling */
@@ -433,7 +431,7 @@ section:last-of-type {
 .education-card:hover {
     transform: translateY(-2px);
     box-shadow: var(--card-shadow-hover);
-    border-color: rgba(79, 70, 229, 0.1);
+    border-color: cyan;
 }
 
 .education-card::before {
@@ -462,11 +460,11 @@ section:last-of-type {
 .education-duration {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--accent-indigo);
-    background: rgba(79, 70, 229, 0.06);
+    color: cyan;
+    background: black;
     padding: 0.3rem 0.75rem;
     border-radius: 20px;
-    border: 1px solid rgba(79, 70, 229, 0.1);
+    border: 1px solid darkslategray;
     white-space: nowrap;
 }
 
@@ -486,7 +484,7 @@ section:last-of-type {
     padding: 0.9rem 2.2rem;
     border-radius: 14px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     cursor: pointer;
     transition: var(--transition-smooth);
@@ -494,14 +492,14 @@ section:last-of-type {
 
 .btn-primary {
     background: var(--gradient-accent);
-    color: white; /* Pure White */
+    color: black;
     border: none;
-    box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3); /* Indigo Shadow */
+    box-shadow: 0 4px 15px black;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px -5px rgba(79, 70, 229, 0.45);
+    box-shadow: 0 8px 20px black;
 }
 
 .btn-primary:active {
@@ -524,7 +522,7 @@ section:last-of-type {
 .project-card {
     background-color: var(--bg-secondary);
     border-radius: 20px;
-    border: 1px solid rgba(15, 23, 42, 0.05);
+    border: 1px solid var(--glass-border);
     box-shadow: var(--card-shadow);
     transition: var(--transition-smooth);
     overflow: hidden;
@@ -535,15 +533,15 @@ section:last-of-type {
 .project-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--card-shadow-hover);
-    border-color: rgba(79, 70, 229, 0.1);
+    border-color: cyan;
 }
 
 .project-image {
     width: 100%;
     aspect-ratio: 16 / 10;
     overflow: hidden;
-    background-color: aliceblue;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+    background-color: black;
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .project-image img {
@@ -588,11 +586,11 @@ section:last-of-type {
 .tech-tag {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--accent-indigo);
-    background: rgba(79, 70, 229, 0.06);
+    color: cyan;
+    background: black;
     padding: 0.35rem 0.85rem;
     border-radius: 8px;
-    border: 1px solid rgba(79, 70, 229, 0.08);
+    border: 1px solid darkslategray;
 }
 
 .project-link {
@@ -600,7 +598,7 @@ section:last-of-type {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--accent-indigo);
+    color: cyan;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -609,7 +607,7 @@ section:last-of-type {
 }
 
 .project-link:hover {
-    color: var(--accent-cyan);
+    color: white;
 }
 
 .link-icon {
@@ -636,7 +634,7 @@ section:last-of-type {
     border-radius: 24px;
     padding: 3rem;
     box-shadow: var(--card-shadow);
-    border: 1px solid rgba(15, 23, 42, 0.04);
+    border: 1px solid var(--glass-border);
 }
 
 @media (max-width: 576px) {
@@ -648,47 +646,89 @@ section:last-of-type {
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.floating-group {
+    position: relative;
+    display: block;
+    margin-top: 0.6rem;
+}
+
+.form-input {
+    width: 100%;
+    height: 54px;
+    padding: 0 1.2rem;
+    border-radius: 12px;
+    border: 1.5px solid cyan;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.form-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    border: 1.5px solid cyan;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    outline: none;
+    transition: var(--transition-smooth);
+    resize: vertical;
 }
 
 .form-label {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-left: 0.2rem;
-}
-
-.form-input, .form-textarea {
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    padding: 0.9rem 1.1rem;
-    border-radius: 12px;
-    border: 1px solid lightgray;
-    background-color: white;
-    color: var(--text-primary);
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: cyan;
+    background-color: black;
+    padding: 0 0.5rem;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 2;
     transition: var(--transition-smooth);
-    outline: none;
 }
 
 .form-input::placeholder, .form-textarea::placeholder {
-    color: lightslategray;
+    color: dimgray;
+    font-size: 0.95rem;
 }
 
 .form-input:focus, .form-textarea:focus {
-    border-color: var(--accent-indigo);
-    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+    border-color: deepskyblue;
+    box-shadow: 0 0 12px darkslategray;
+}
+
+.form-input:focus ~ .form-label, .form-textarea:focus ~ .form-label {
+    color: deepskyblue;
 }
 
 .btn-submit {
     align-self: flex-start;
     width: 100%;
     margin-top: 1rem;
+    background: mediumseagreen !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 4px 20px mediumseagreen !important;
+    transition: var(--transition-smooth);
+}
+
+.btn-submit:hover {
+    background: forestgreen !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px springgreen !important;
 }
 
 @media (min-width: 576px) {
@@ -700,8 +740,6 @@ section:last-of-type {
 /* ==========================================
    Web3Forms Custom Premium Notifications & Loader
    ========================================== */
-
-
 
 /* Form Status Messages */
 .form-status {
@@ -732,15 +770,15 @@ section:last-of-type {
 }
 
 .form-status.success {
-    background: rgba(16, 185, 129, 0.06);
-    border-color: rgba(16, 185, 129, 0.2);
-    color: darkgreen;
+    background: black;
+    border-color: mediumseagreen;
+    color: mediumseagreen;
 }
 
 .form-status.error {
-    background: rgba(239, 68, 68, 0.06);
-    border-color: rgba(239, 68, 68, 0.2);
-    color: darkred;
+    background: black;
+    border-color: crimson;
+    color: crimson;
 }
 
 .status-icon {
@@ -752,7 +790,7 @@ section:last-of-type {
     height: 22px;
     border-radius: 50%;
     background: currentColor;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
@@ -775,9 +813,9 @@ section:last-of-type {
 .btn-submit .spinner {
     width: 18px;
     height: 18px;
-    border: 2.5px solid rgba(255, 255, 255, 0.3);
+    border: 2.5px solid darkslategray;
     border-radius: 50%;
-    border-top-color: white;
+    border-top-color: cyan;
     animation: spin 0.8s linear infinite;
     display: inline-block;
 }
@@ -815,7 +853,7 @@ section:last-of-type {
     border-radius: 24px;
     padding: 3rem;
     box-shadow: var(--card-shadow);
-    border: 1px solid rgba(15, 23, 42, 0.04);
+    border: 1px solid var(--glass-border);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -850,23 +888,23 @@ section:last-of-type {
 }
 
 .contact-info-column .about-contact-info i {
-    color: var(--primary-color);
+    color: cyan;
     font-size: 1.4rem;
     width: 44px;
     height: 44px;
-    background: rgba(79, 70, 229, 0.06);
+    background: black;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     transition: var(--transition-smooth);
-    border: 1px solid rgba(79, 70, 229, 0.1);
+    border: 1px solid darkslategray;
 }
 
 .contact-info-column .about-contact-info p:hover i {
     background: var(--gradient-accent);
-    color: white; /* Pure White */
+    color: black;
     transform: translateY(-2px);
     border-color: transparent;
 }
@@ -938,10 +976,8 @@ section:last-of-type {
         right: -100%;
         width: min(78vw, 300px);
         height: 100vh;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        box-shadow: -10px 0 35px rgba(15, 23, 42, 0.12);
+        background: black;
+        box-shadow: -10px 0 35px black;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -961,7 +997,7 @@ section:last-of-type {
         font-size: 1.1rem;
         width: 100%;
         padding: 0.6rem 0;
-        border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+        border-bottom: 1px solid darkslategray;
     }
 
     .nav-link::after {
@@ -969,10 +1005,10 @@ section:last-of-type {
     }
 
     .nav-link.active {
-        color: var(--accent-indigo);
+        color: cyan;
         font-weight: 700;
         padding-left: 0.5rem;
-        border-left: 3px solid var(--accent-indigo);
+        border-left: 3px solid cyan;
     }
 
     .btn-cv {
@@ -1137,7 +1173,7 @@ section:last-of-type {
 .certificate-card {
     background: var(--bg-secondary);
     border-radius: 20px;
-    border: 1px solid rgba(15, 23, 42, 0.06);
+    border: 1px solid var(--glass-border);
     box-shadow: var(--card-shadow);
     transition: var(--transition-smooth);
     overflow: hidden;
@@ -1148,18 +1184,18 @@ section:last-of-type {
 
 .certificate-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 45px -10px rgba(79, 70, 229, 0.18);
-    border-color: rgba(79, 70, 229, 0.25);
+    box-shadow: 0 25px 45px black;
+    border-color: cyan;
 }
 
 .certificate-thumb-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 11;
-    background: #f8fafc;
+    background: black;
     overflow: hidden;
     cursor: pointer;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+    border-bottom: 1px solid var(--glass-border);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1169,7 +1205,7 @@ section:last-of-type {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background: #ffffff;
+    background: black;
     padding: 0.4rem;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
@@ -1182,21 +1218,19 @@ section:last-of-type {
 .certificate-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: black;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
-    opacity: 0;
     transition: opacity 0.3s ease;
-    color: #ffffff;
+    color: white;
 }
 
 .certificate-card:hover .certificate-overlay {
-    opacity: 1;
+    opacity: 0.85;
 }
 
 .certificate-overlay span {
@@ -1206,11 +1240,12 @@ section:last-of-type {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.25);
+    background: black;
     padding: 0.45rem 1.1rem;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid cyan;
+    box-shadow: 0 4px 15px black;
+    color: cyan;
 }
 
 .certificate-content {
@@ -1232,11 +1267,11 @@ section:last-of-type {
 
 .certificate-issuer {
     font-weight: 600;
-    color: var(--accent-indigo);
-    background: rgba(79, 70, 229, 0.08);
+    color: cyan;
+    background: black;
     padding: 0.3rem 0.8rem;
     border-radius: 30px;
-    border: 1px solid rgba(79, 70, 229, 0.15);
+    border: 1px solid darkslategray;
 }
 
 .certificate-date {
@@ -1264,7 +1299,7 @@ section:last-of-type {
 }
 
 .certificate-speaker i {
-    color: var(--accent-indigo);
+    color: cyan;
     margin-top: 4px;
     flex-shrink: 0;
 }
@@ -1285,7 +1320,7 @@ section:last-of-type {
     padding: 0.7rem 1rem;
     border-radius: 12px;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     transition: var(--transition-smooth);
     cursor: pointer;
@@ -1293,37 +1328,35 @@ section:last-of-type {
 }
 
 .btn-cert-view {
-    background: rgba(79, 70, 229, 0.08);
-    color: var(--accent-indigo);
-    border: 1px solid rgba(79, 70, 229, 0.2);
+    background: black;
+    color: cyan;
+    border: 1px solid cyan;
 }
 
 .btn-cert-view:hover {
-    background: var(--accent-indigo);
-    color: #ffffff;
+    background: cyan;
+    color: black;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    box-shadow: 0 4px 12px cyan;
 }
 
 .btn-cert-download {
     background: var(--gradient-accent);
-    color: #ffffff !important;
+    color: black !important;
     border: none;
-    box-shadow: 0 4px 15px -2px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 4px 15px cyan;
 }
 
 .btn-cert-download:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px -2px rgba(79, 70, 229, 0.45);
+    box-shadow: 0 8px 20px deepskyblue;
 }
 
 /* Modal Lightbox for Certificate Zoom View */
 .cert-modal {
     position: fixed;
     inset: 0;
-    background: rgba(15, 23, 42, 0.82);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: black;
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -1343,10 +1376,11 @@ section:last-of-type {
     position: relative;
     max-width: 900px;
     width: 100%;
-    background: #ffffff;
+    background: black;
+    border: 1px solid darkslategray;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 30px 70px black;
     transform: scale(0.92);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
@@ -1362,8 +1396,8 @@ section:last-of-type {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    background: #fafafa;
+    border-bottom: 1px solid darkslategray;
+    background: black;
 }
 
 .cert-modal-title {
@@ -1388,8 +1422,8 @@ section:last-of-type {
 }
 
 .cert-modal-close:hover {
-    background: rgba(0, 0, 0, 0.08);
-    color: #000;
+    background: darkslategray;
+    color: white;
 }
 
 .cert-modal-body {
@@ -1397,7 +1431,7 @@ section:last-of-type {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f1f5f9;
+    background: black;
     max-height: 68vh;
     overflow: auto;
 }
@@ -1407,8 +1441,8 @@ section:last-of-type {
     max-height: 62vh;
     object-fit: contain;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    background: #ffffff;
+    box-shadow: 0 10px 30px black;
+    background: black;
 }
 
 .cert-modal-footer {
@@ -1416,8 +1450,8 @@ section:last-of-type {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
-    background: #ffffff;
+    border-top: 1px solid darkslategray;
+    background: black;
 }
 
 
