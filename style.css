@@ -199,7 +199,7 @@ body {
 
 /* Main Container and Spacing between Sections */
 .container {
-    padding-top: 110px;
+    padding-top: 85px;
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 2rem;
@@ -207,7 +207,8 @@ body {
 }
 
 section {
-    padding: 6rem 0;
+    padding-top: 50px;
+    padding-bottom: 4rem;
     margin-bottom: 4rem; /* Spacing between sections */
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
@@ -230,8 +231,9 @@ section:last-of-type {
     margin-top: 0.5rem;
 }
 
-/* About Section */
+/* About Section (Index Page) */
 .about-section {
+    padding-top: 0 !important;
     display: flex;
     align-items: center;
 }
